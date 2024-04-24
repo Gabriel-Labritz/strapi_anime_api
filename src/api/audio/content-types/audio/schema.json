@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "audios",
+  "info": {
+    "singularName": "audio",
+    "pluralName": "audios",
+    "displayName": "Audio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "displayName": {
+      "type": "string",
+      "required": true
+    },
+    "anime": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::anime.anime",
+      "mappedBy": "audio"
+    }
+  }
+}
